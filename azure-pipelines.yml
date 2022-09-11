@@ -11,7 +11,7 @@ pool:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'nuri-acr-connection'
+  dockerRegistryServiceConnection: 'test-acr-connection'
   imageRepository: 'azure-app'
   containerRegistry: 'nuriacr.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/azure-app/Dockerfile'
