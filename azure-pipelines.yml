@@ -56,7 +56,7 @@ stages:
           - task: Bash@3
             inputs:
               targetType: 'inline'
-              script: 'sed -e "s|ACR_REPO_URL|$(containerRegistry)|;s|BUILD_ID|$(tag)|" $(dockerRegistryServiceConnection)/deployment/azure-app-deployment.yaml'
+              script: 'cat $(dockerRegistryServiceConnection)/deployment/azure-app-deployment.yaml'
             
             
 
