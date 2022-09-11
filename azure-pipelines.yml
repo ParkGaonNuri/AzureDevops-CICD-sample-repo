@@ -56,7 +56,7 @@ stages:
           - task: Bash@3
             inputs:
               targetType: 'inline'
-              script: 'cat $(dockerRegistryServiceConnection)/deployment/azure-app-deployment.yaml'
+              script: 'cat $(Build.SourcesDirectory)/deployment/azure-app-deployment.yaml'
             
             
 
