@@ -58,6 +58,7 @@ stages:
               targetType: 'inline'
               script: |
                 sed -i 's|ACR_REPO_URL|$(containerRegistry)|' $(Build.SourcesDirectory)/deployment/azure-app-deployment.yaml
+                sed -i 's|BUILD_ID|$(tag)|' $(Build.SourcesDirectory)/deployment/azure-app-deployment.yaml
                 cat $(Build.SourcesDirectory)/deployment/azure-app-deployment.yaml
             
             
